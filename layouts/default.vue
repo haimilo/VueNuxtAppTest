@@ -1,16 +1,31 @@
 <template>
   <div>
-    <div id="header">
-      <span id="title">Header Set in App.vue</span>
-    </div>
-    <div id="main">
+    <Header />
+    <Main>
+      <Navi />
+      <Gallery />
       <nuxt />
-    </div>
-    <div id="footer">
-      <span>Footer Set in App.vue</span>
-    </div>
+    </Main>
+    <Footer />
   </div>
 </template>
+
+<script>
+import Header from "@/components/header"
+import Main from "@/components/main"
+import Footer from "@/components/footer"
+import Navi from "@/components/navi"
+import Gallery from "@/components/gallery"
+export default {
+  components: {
+    Header,
+    Main,
+    Footer,
+    Navi,
+    Gallery
+  }
+}
+</script>
 
 <style>
 html {
@@ -31,6 +46,34 @@ html {
   margin: 0;
 }
 
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 45px;
+  width: 100%;
+  background-color: rgb(65, 184, 131);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 45px;
+  width: 100%;
+  background-color: rgb(53, 73, 94);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
 .button--green {
   display: inline-block;
   border-radius: 4px;
@@ -43,6 +86,7 @@ html {
 .button--green:hover {
   color: #fff;
   background-color: #3b8070;
+  cursor: pointer;
 }
 
 .button--grey {
@@ -58,34 +102,6 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
-}
-
-#header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 45px;
-  width: 100%;
-  background-color: brown;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-}
-
-#footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  height: 45px;
-  width: 100%;
-  background-color: brown;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
 }
 </style>
 

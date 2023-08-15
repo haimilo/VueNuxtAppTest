@@ -2,7 +2,7 @@
   <div id="error">
     <AppLogo />
     <p id="errorStatus">
-      {{ error.StatusCode }}
+      {{ error.statusCode }} NOT FOUND
     </p>
     <p class="errorMsg">
       {{ error.message }}
@@ -19,7 +19,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #error {
   margin: 20px;
   text-align: center;
